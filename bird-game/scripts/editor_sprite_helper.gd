@@ -16,6 +16,3 @@ func _process(_delta):
     sprite.texture = bird.bird_data.texture_open
     bird.get_node("Area2D/AudioStreamPlayer2D").stream = bird.bird_data.grab_sound
     bird.get_node("AudioStreamPlayer2D").stream = bird.bird_data.eat_sound
-
-    
-    
