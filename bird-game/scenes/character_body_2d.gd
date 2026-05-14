@@ -6,11 +6,11 @@ func _physics_process(delta: float) -> void:
     # Add the gravity.
     if not is_on_floor():
         velocity += get_gravity() * delta
-        
-    if $Area2D.dragging:
-        global_position = get_global_mouse_position() + $Area2D.drag_offset
 
     move_and_slide()
+            
+    if $Area2D.dragging:
+        global_position = get_global_mouse_position() + $Area2D.drag_offset
 
     for i in range(get_slide_collision_count()):
         var collision = get_slide_collision(i)
