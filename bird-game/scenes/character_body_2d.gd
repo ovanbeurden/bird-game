@@ -5,7 +5,6 @@ var score = 0.0
 @export var bird_data: BirdData = preload("res://resources/bluebird.tres")
 
 func _ready() -> void:
-    print(bird_data)
     $Area2D/Sprite2D.texture = bird_data.texture_open
 
 func _physics_process(delta: float) -> void:
@@ -27,13 +26,11 @@ func _physics_process(delta: float) -> void:
         var body = collision.get_collider()
 
         if body is RigidBody2D:
-            print("Touching rigid body:", body.name)
+            #print("Touching rigid body:", body.name)
             if body.name == "Nut":
                 $Area2D/Sprite2D.texture = bird_data.texture_close
                 score += body.nutscore
-                print(score)
                 # TODO: remove nut
                 
     #scale = Vector2(score/10000+0.1, score/10000+0.1)
-    print(score)
     

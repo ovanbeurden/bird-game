@@ -16,7 +16,6 @@ func _ready() -> void:
 
 func _input(event):
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-
         if event.pressed:
             Input.set_custom_mouse_cursor(cursor_close, Input.CURSOR_ARROW, Vector2(mouse_size/2, mouse_size/2))
         else:
