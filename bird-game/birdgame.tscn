@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8yuq2opbll1l"]
+[gd_scene load_steps=3 format=3 uid="uid://c8yuq2opbll1l"]
 
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://camera_2d.gd" id="1_avsf7"]
+[ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="2_avsf7"]
 
 [node name="BirdGame" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_avsf7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1.0000001, -372)
+scale = Vector2(0.371582, 0.371582)
+texture = ExtResource("2_avsf7")
