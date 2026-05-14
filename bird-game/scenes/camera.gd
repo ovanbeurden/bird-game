@@ -10,6 +10,7 @@ var bomblife = 3
 var final_score = 0
 var gameover_state = 0
 var label_pos
+var score_latch = 0
 
 @onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
@@ -58,4 +59,6 @@ func _exit_tree() -> void:
 func game_over():
     gameover_state = 1
     $GameOver.visible = true
-    final_score = global_score
+    if score_latch == 0:
+        final_score = global_score
+        score_latch = 1
