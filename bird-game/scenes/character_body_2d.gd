@@ -1,12 +1,6 @@
 extends CharacterBody2D
 
-#var drag_offset = Vector2.ZERO
-var gravity_factor = 10
-var mass = 10
 var down_speed = 0
-#const SPEED = 300.0
-#const JUMP_VELOCITY = -400.0
-
 
 func _physics_process(delta: float) -> void:
     # Add the gravity.
@@ -16,5 +10,11 @@ func _physics_process(delta: float) -> void:
     if $Area2D.dragging:
         global_position = get_global_mouse_position() + $Area2D.drag_offset
 
-
     move_and_slide()
+
+    for i in range(get_slide_collision_count()):
+        var collision = get_slide_collision(i)
+        var body = collision.get_collider()
+
+        if body is RigidBody2D:
+            print("Touching rigid body:", body.name)
