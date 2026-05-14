@@ -65,6 +65,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
             birdstatus = 0
         else:
             score -= area.nutscore*2
+            main.global_score -= area.nutscore/2
 
     play_gulp_sound()
     area.queue_free()
