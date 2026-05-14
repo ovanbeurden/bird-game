@@ -1,36 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=6 format=3 uid="uid://bpdrwuohijr8"]
 
-[ext_resource type="Script" path="res://scenes/collision_shape_2d.gd" id="2_p8nh0"]
-[ext_resource type="Texture2D" uid="uid://b4j2qdh714nor" path="res://art/snail.png" id="2_tmlye"]
-[ext_resource type="Script" uid="uid://ba202kpxlmlgr" path="res://scenes/character_body_2d.gd" id="2_ys67x"]
-[ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_b05li"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
-[ext_resource type="PackedScene" uid="uid://dltctbwfvfglt" path="res://scenes/nut.tscn" id="5_b05li"]
+[ext_resource type="PackedScene" uid="uid://dux1hl8qca85f" path="res://scenes/bird_guy.tscn" id="4_gtx3x"]
+[ext_resource type="PackedScene" uid="uid://v331m71nltl4" path="res://scenes/nut.tscn" id="5_b05li"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
 size = Vector2(1021, 11)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
-size = Vector2(344.30023, 282.71484)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtx3x"]
-size = Vector2(234.52328, 191.71634)
-
-[sub_resource type="GDScript" id="GDScript_ys67x"]
-script/source = "extends Sprite2D
-
-var score
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-    pass
-"
 
 [node name="BirdGame" type="Node2D"]
 
@@ -53,27 +29,13 @@ shape = SubResource("RectangleShape2D_ys67x")
 [node name="Nut" parent="." instance=ExtResource("5_b05li")]
 position = Vector2(-73, -683)
 
-[node name="BirdGuy" type="CharacterBody2D" parent="."]
+[node name="BirdGuy" parent="." instance=ExtResource("4_gtx3x")]
 position = Vector2(-14.999999, -18)
-scale = Vector2(0.20040649, 0.15408629)
-script = ExtResource("2_ys67x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BirdGuy"]
-position = Vector2(73.912254, -277.64478)
-scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_kod1s")
-script = ExtResource("2_p8nh0")
+[node name="BirdGuy2" parent="." instance=ExtResource("4_gtx3x")]
+position = Vector2(-18.006096, -20.773554)
+scale = Vector2(0.04016276, 0.023742585)
 
-[node name="Area2D" type="Area2D" parent="BirdGuy"]
-script = ExtResource("3_b05li")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BirdGuy/Area2D"]
-position = Vector2(143.77025, -318.40924)
-scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_gtx3x")
-
-[node name="Sprite2D" type="Sprite2D" parent="BirdGuy/Area2D"]
-position = Vector2(63.932552, -279.46994)
-scale = Vector2(0.3554767, 0.35267046)
-texture = ExtResource("2_tmlye")
-script = SubResource("GDScript_ys67x")
+[node name="BirdGuy3" parent="." instance=ExtResource("4_gtx3x")]
+position = Vector2(-18.608538, -21.20092)
+scale = Vector2(0.008048878, 0.003658407)
