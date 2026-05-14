@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltctbwfvfglt"]
+
+[ext_resource type="Texture2D" uid="uid://dwkutve8dyjp" path="res://sprites/walnut.jpg" id="1_e8gc1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1t6dd"]
+radius = 25.019993
+
+[node name="Nut" type="RigidBody2D"]
+
+[node name="Walnut" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_e8gc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1t6dd")

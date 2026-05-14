@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=7 format=3 uid="uid://bpdrwuohijr8"]
 
 [ext_resource type="Script" uid="uid://cb6fsv7o0bhjg" path="res://scripts/birb_unit.gd" id="1_kod1s"]
 [ext_resource type="Texture2D" uid="uid://b4j2qdh714nor" path="res://art/snail.png" id="2_tmlye"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
+[ext_resource type="PackedScene" uid="uid://dltctbwfvfglt" path="res://scenes/nut.tscn" id="5_b05li"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
 size = Vector2(344.30023, 279.06442)
@@ -35,3 +36,7 @@ z_index = -100
 position = Vector2(1.0000001, -372)
 scale = Vector2(0.371582, 0.371582)
 texture = ExtResource("4_b05li")
+metadata/_edit_lock_ = true
+
+[node name="Nut" parent="." instance=ExtResource("5_b05li")]
+position = Vector2(-73, -683)
