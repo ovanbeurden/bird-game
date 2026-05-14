@@ -18,9 +18,6 @@ func _input(event):
             dragging = true
             drag_man.current_dragged_object = self
             player.play()
-            print(bird_data)
-            print(bird_data.grab_sound)
-            print("PLAY")
             
         elif drag_man.current_dragged_object == self:
             dragging = false
