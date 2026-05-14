@@ -4,6 +4,7 @@ var down_speed = 0
 var score = 0.0
 var mouth_close_time_left := 0.0
 @export var bird_data: BirdData = preload("res://resources/bluebird.tres")
+@onready var player = $AudioStreamPlayer2D
 
 func _ready() -> void:
     $Area2D.area_entered.connect(_on_area_2d_area_entered)
@@ -39,11 +40,19 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
     if bird_data == null or area.nut_data == null:
         return
 
-    if bird_data.color.to_lower() != area.nut_data.color.to_lower():
-        return
+    #if bird_data.color.to_lower() != area.nut_data.color.to_lower():
+        #return
 
     mouth_close_time_left = 0.5
     $Area2D/Sprite2D.texture = bird_data.texture_close
-    score += area.nutscore
+    if bird_data.color.to_lower() == area.nut_data.color.to_lower():
+        score += area.nutscore
+    else:
+        if score < area.nutscore:
+            score = 0.0
+        else:
+            score -= area.nutscore
+
+    player.play()
     area.queue_free()
     
