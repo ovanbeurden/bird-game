@@ -10,4 +10,5 @@ script = ExtResource("1_vbryq")
 texture_hold = ExtResource("3_wx73b")
 texture_open = ExtResource("4_o7mix")
 texture_close = ExtResource("2_1h04w")
+color = "purple"
 metadata/_custom_type_script = "uid://bniak84vtafw"

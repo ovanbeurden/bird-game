@@ -1,17 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://v331m71nltl4"]
+[gd_scene load_steps=6 format=3 uid="uid://dltctbwfvfglt"]
 
 [ext_resource type="Script" uid="uid://bi5x3ipgsl45d" path="res://scenes/nut.gd" id="1_1t6dd"]
-[ext_resource type="Texture2D" uid="uid://dwkutve8dyjp" path="res://sprites/walnut.jpg" id="1_e8gc1"]
+[ext_resource type="Resource" uid="uid://bbk3mvx4dtm05" path="res://resources/bluenut.tres" id="2_fies8"]
+[ext_resource type="Texture2D" uid="uid://daslsfkpy0o45" path="res://sprites/nutBlue.png" id="3_fies8"]
+[ext_resource type="Script" uid="uid://cen7ruwhj87dn" path="res://scripts/nut_sprite_editor_helper.gd" id="4_6k8lo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1t6dd"]
-radius = 25.019993
+radius = 32.55764
 
 [node name="Nut" type="RigidBody2D"]
 script = ExtResource("1_1t6dd")
+nut_data = ExtResource("2_fies8")
 
 [node name="Walnut" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_e8gc1")
+texture = ExtResource("3_fies8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1t6dd")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("4_6k8lo")

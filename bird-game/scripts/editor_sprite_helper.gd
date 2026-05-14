@@ -1,8 +1,6 @@
 @tool
 extends Node
 
-@export var bird_node: NodePath
-
 func _process(_delta):
     if not Engine.is_editor_hint():
         return
