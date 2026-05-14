@@ -8,3 +8,5 @@ class_name BirdData
 @export var color: String = "blue"
 @export var grab_sound: AudioStream
 @export var eat_sound: AudioStream
+@export var not_tasty_sound: AudioStream
+@export var die_sound: AudioStream

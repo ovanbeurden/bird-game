@@ -79,3 +79,7 @@ stream = ExtResource("7_muby4")
 [node name="GrabPlayer" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(1.0000002, 1.0000002)
 stream = ExtResource("5_tx71x")
+
+[node name="NotTastyPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="DiePlayer" type="AudioStreamPlayer" parent="."]

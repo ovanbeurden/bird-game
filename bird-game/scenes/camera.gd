@@ -8,6 +8,8 @@ var birdlife = 3
 var global_score = 0
 var bomblife = 3
 var final_score = 0
+var gameover_state = 0
+var label_pos
 
 @onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
@@ -23,12 +25,16 @@ func _ready() -> void:
     cursor_sprite.texture = cursor_open
     Input.mouse_mode = Input.MOUSE_MODE_HIDDEN if hide_system_cursor else Input.MOUSE_MODE_VISIBLE
     $GameOver.visible = false
-    $Label2.visible = false
+    label_pos = $Label.position.x
     
 
 func _process(_delta: float) -> void:
     cursor_sprite.position = get_viewport().get_mouse_position()
-    $Label.text = "Score: " + str(global_score)
+    if gameover_state == 0:
+        $Label.text = "Score: " + str(global_score)
+    else:
+        $Label.position.x = label_pos - 150
+        $Label.text = "Your final score: " + str(final_score)
     birdlife = $BirdGuy.birdstatus + $BirdGuy2.birdstatus + $BirdGuy3.birdstatus
     if has_node("Area2D") or has_node("Area2D2") or has_node("Area2D3"):
         bomblife = 1
@@ -50,7 +56,6 @@ func _exit_tree() -> void:
 
             
 func game_over():
+    gameover_state = 1
     $GameOver.visible = true
     final_score = global_score
-    $Label2.text = "Your final score: " + str(final_score)
-    $Label2.visible = true

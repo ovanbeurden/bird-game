@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="BirdData" load_steps=14 format=3 uid="uid://b1dv82hs2xw0a"]
+[gd_resource type="Resource" script_class="BirdData" load_steps=16 format=3 uid="uid://b1dv82hs2xw0a"]
 
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_ra2oh"]
+[ext_resource type="AudioStream" uid="uid://1ts6tnxbc3bn" path="res://sound/red_die.wav" id="1_tgl6q"]
 [ext_resource type="AudioStream" uid="uid://cjcxo0fq2j4i3" path="res://sound/red_gulp.wav" id="1_vrrs1"]
 [ext_resource type="Texture2D" uid="uid://dkv4hgx5d76mv" path="res://sprites/birdRed_close1.png" id="2_205of"]
 [ext_resource type="AudioStream" uid="uid://dwnan12vokuy1" path="res://sound/red_grab.wav" id="2_k833r"]
 [ext_resource type="Texture2D" uid="uid://bppwiog8pq74p" path="res://sprites/birdRed_up1.png" id="3_d6hrx"]
+[ext_resource type="AudioStream" uid="uid://cdrwpnxds4ndv" path="res://sound/red_not_tasty.wav" id="4_8p433"]
 [ext_resource type="Texture2D" uid="uid://c05ddkkl1epsx" path="res://sprites/birdRed_open1.png" id="4_vrrs1"]
 [ext_resource type="Texture2D" uid="uid://hdxv2bxjm0wc" path="res://sprites/birdRed_dead.png" id="5_us35b"]
 [ext_resource type="Texture2D" uid="uid://td5fl5jycs6u" path="res://sprites/birdRed_up2.png" id="6_s01n0"]
@@ -69,4 +71,6 @@ texture_dead = SubResource("SpriteFrames_dj3mx")
 color = "red"
 grab_sound = ExtResource("2_k833r")
 eat_sound = ExtResource("1_vrrs1")
+not_tasty_sound = ExtResource("4_8p433")
+die_sound = ExtResource("1_tgl6q")
 metadata/_custom_type_script = "uid://bniak84vtafw"
