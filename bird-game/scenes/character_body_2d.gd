@@ -3,6 +3,7 @@ extends CharacterBody2D
 var down_speed = 0
 var score = 0.0
 var inv_scale_factor = 1000
+var birdstatus = 1
 var mouth_close_time_left := 0.0
 @export var bird_data: BirdData = preload("res://resources/bluebird.tres")
 @onready var grab_player = $GrabPlayer
@@ -47,8 +48,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
     if bird_data == null or area.nut_data == null:
         return
 
-    #if bird_data.color.to_lower() != area.nut_data.color.to_lower():
-        #return
+    if birdstatus == 0:
+        return
 
     mouth_close_time_left = 0.5
     $Area2D/Sprite2D.texture = bird_data.texture_close
@@ -57,6 +58,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
     else:
         if score < area.nutscore*2:
             score = 0.0
+            birdstatus = 0
         else:
             score -= area.nutscore*2
 
