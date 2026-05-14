@@ -14,3 +14,7 @@ func _process(_delta):
 
     var sprite = bird.get_node("Area2D/Sprite2D")
     sprite.texture = bird.bird_data.texture_open
+    bird.get_node("Area2D/AudioStreamPlayer2D").stream = bird.bird_data.grab_sound
+
+    
+    

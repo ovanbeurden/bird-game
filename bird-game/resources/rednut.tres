@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NutData" load_steps=3 format=3 uid="uid://vpxwrgs5o7hv"]
 
-[ext_resource type="Script" uid="uid://bway4rf1abomd" path="res://scripts/nut_data.gd" id="1_4okyv"]
+[ext_resource type="Script" path="res://scripts/nut_data.gd" id="1_4okyv"]
 [ext_resource type="Texture2D" uid="uid://b1vqvrbx6eqy8" path="res://sprites/nutRed.png" id="2_q384o"]
 
 [resource]

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="BirdData" load_steps=5 format=3 uid="uid://b21juy1ccoaat"]
+[gd_resource type="Resource" script_class="BirdData" load_steps=6 format=3 uid="uid://b21juy1ccoaat"]
 
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_vbryq"]
+[ext_resource type="AudioStream" uid="uid://7t63fgm2dxc1" path="res://sound/rooster2.wav" id="1_wx73b"]
 [ext_resource type="Texture2D" uid="uid://dscwffqgu4fey" path="res://sprites/birdPurple_close1.png" id="2_1h04w"]
 [ext_resource type="Texture2D" uid="uid://0i0ih0x0sg6d" path="res://sprites/birdPurple_up1.png" id="3_wx73b"]
 [ext_resource type="Texture2D" uid="uid://d17ymv4gkalc0" path="res://sprites/birdPurple_open1.png" id="4_o7mix"]
@@ -11,4 +12,5 @@ texture_hold = ExtResource("3_wx73b")
 texture_open = ExtResource("4_o7mix")
 texture_close = ExtResource("2_1h04w")
 color = "purple"
+grab_sound = ExtResource("1_wx73b")
 metadata/_custom_type_script = "uid://bniak84vtafw"
