@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=12 format=3 uid="uid://bpdrwuohijr8"]
 
 [ext_resource type="Script" uid="uid://cb6fsv7o0bhjg" path="res://scripts/birb_unit.gd" id="1_kod1s"]
 [ext_resource type="Script" uid="uid://ba88a3wb78ews" path="res://scenes/collision_shape_2d.gd" id="2_p8nh0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_b05li"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
+[ext_resource type="PackedScene" path="res://scenes/nut.tscn" id="5_b05li"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
 size = Vector2(344.30023, 279.06442)
@@ -54,6 +55,7 @@ z_index = -100
 position = Vector2(14, -370.99997)
 scale = Vector2(0.371582, 0.371582)
 texture = ExtResource("4_b05li")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -66,3 +68,6 @@ shape = SubResource("RectangleShape2D_ys67x")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(2, -53)
 shape = SubResource("RectangleShape2D_ys67x")
+
+[node name="Nut" parent="." instance=ExtResource("5_b05li")]
+position = Vector2(-73, -683)
