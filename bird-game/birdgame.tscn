@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8yuq2opbll1l"]
+[gd_scene load_steps=3 format=3 uid="uid://cwuskx33xygh7"]
 
-[ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://camera_2d.gd" id="1_avsf7"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="1_avsf7"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="2_avsf7"]
 
 [node name="BirdGame" type="Node2D"]
