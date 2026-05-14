@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8yuq2opbll1l"]
+
+[ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://camera_2d.gd" id="1_avsf7"]
+
+[node name="BirdGame" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_avsf7")
