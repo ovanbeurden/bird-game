@@ -14,7 +14,7 @@ func _ready() -> void:
     print("My bird data: ", bird_data)
     print("My bird color: ", bird_data.color)
     $Area2D.area_entered.connect(_on_area_2d_area_entered)
-    $Area2D/Sprite2D.texture = bird_data.texture_open
+    $Area2D/Sprite2D.sprite_frames = bird_data.texture_open
     grab_player.stream = bird_data.grab_sound
     gulp_player.stream = bird_data.eat_sound
 
@@ -32,11 +32,12 @@ func _physics_process(delta: float) -> void:
         velocity = velocity*0
 
     if mouth_close_time_left > 0.0:
-        $Area2D/Sprite2D.texture = bird_data.texture_close
+        $Area2D/Sprite2D.sprite_frames = bird_data.texture_close
     elif $Area2D.dragging:
-        $Area2D/Sprite2D.texture = bird_data.texture_hold
+        $Area2D/Sprite2D.sprite_frames = bird_data.texture_hold
     else:
-        $Area2D/Sprite2D.texture = bird_data.texture_open
+        $Area2D/Sprite2D.sprite_frames = bird_data.texture_open
+    $Area2D/Sprite2D.play()
                 
     scale = Vector2(score/inv_scale_factor+0.1, score/inv_scale_factor+0.1)
 

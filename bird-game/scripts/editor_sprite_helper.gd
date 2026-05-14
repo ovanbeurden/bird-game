@@ -13,4 +13,4 @@ func _process(_delta):
         return
 
     var sprite = bird.get_node("Area2D/Sprite2D")
-    sprite.texture = bird.bird_data.texture_open
+    sprite.SpriteFrames = bird.bird_data.texture_open

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BirdData" load_steps=7 format=3 uid="uid://bh0xkptc6lgv8"]
+[gd_resource type="Resource" script_class="BirdData" load_steps=12 format=3 uid="uid://bh0xkptc6lgv8"]
 
 [ext_resource type="AudioStream" uid="uid://cjyg7yfv24337" path="res://sound/blue_gulp.wav" id="1_36clk"]
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_x4msn"]
@@ -6,12 +6,53 @@
 [ext_resource type="AudioStream" uid="uid://yc3da0l2g0js" path="res://sound/blue_grab.wav" id="2_kmgpx"]
 [ext_resource type="Texture2D" uid="uid://jh00opk0yrcy" path="res://sprites/birdBlue_up1.png" id="3_55en7"]
 [ext_resource type="Texture2D" uid="uid://dhylpqs0mr7bd" path="res://sprites/birdBlue_open1.png" id="4_36clk"]
+[ext_resource type="Texture2D" uid="uid://cefkrkuvhn1pq" path="res://sprites/birdBlue_open2.png" id="5_55en7"]
+[ext_resource type="Texture2D" uid="uid://dsfoco7o56alo" path="res://sprites/birdBlue_up2.png" id="6_4n2xk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36clk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0drmh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37vi4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_55en7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4n2xk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ttyov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_36clk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_55en7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [resource]
 script = ExtResource("1_x4msn")
-texture_hold = ExtResource("3_55en7")
-texture_open = ExtResource("4_36clk")
-texture_close = ExtResource("2_0drmh")
+texture_hold = SubResource("SpriteFrames_37vi4")
+texture_open = SubResource("SpriteFrames_ttyov")
+texture_close = SubResource("SpriteFrames_36clk")
 grab_sound = ExtResource("2_kmgpx")
 eat_sound = ExtResource("1_36clk")
 metadata/_custom_type_script = "uid://bniak84vtafw"
