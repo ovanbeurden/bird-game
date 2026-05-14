@@ -13,7 +13,7 @@ var final_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    hide_system_cursor = not OS.has_feature("editor")lab
+    hide_system_cursor = not OS.has_feature("editor")
 
     var cursor_open_img = load("res://sprites/cursor open.png").get_image()
     cursor_open_img.resize(mouse_size, mouse_size)
