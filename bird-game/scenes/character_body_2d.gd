@@ -32,5 +32,5 @@ func _physics_process(delta: float) -> void:
                 score += body.nutscore
                 # TODO: remove nut
                 
-    #scale = Vector2(score/10000+0.1, score/10000+0.1)
+    scale = Vector2(score/10000+0.1, score/10000+0.1)
     
