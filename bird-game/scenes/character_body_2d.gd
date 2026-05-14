@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var down_speed = 0
 var score = 0.0
-var inv_scale_factor = 1000
+var inv_scale_factor = 700
 var birdstatus = 1
 var mouth_close_time_left := 0.0
 

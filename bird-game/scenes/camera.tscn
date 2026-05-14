@@ -68,16 +68,19 @@ script = ExtResource("10_ft5hh")
 z_index = 1000
 
 [node name="Area2D" parent="." instance=ExtResource("12_d8io0")]
-position = Vector2(80.99999, -22.999998)
-scale = Vector2(0.2, 0.2)
+z_index = -1
+position = Vector2(2, -45)
+scale = Vector2(0.4, 0.4)
 
 [node name="Area2D2" parent="." instance=ExtResource("12_d8io0")]
-position = Vector2(367.99997, -24)
-scale = Vector2(0.2, 0.2)
+z_index = -1
+position = Vector2(368, -46)
+scale = Vector2(0.4, 0.4)
 
 [node name="Area2D3" parent="." instance=ExtResource("12_d8io0")]
-position = Vector2(-392.99997, -22)
-scale = Vector2(0.2, 0.2)
+z_index = -1
+position = Vector2(-391, -46)
+scale = Vector2(0.4, 0.4)
 
 [node name="GameOver" type="Sprite2D" parent="."]
 position = Vector2(4.9999895, -265.625)
@@ -91,6 +94,7 @@ offset_right = -345.0
 offset_bottom = -417.0
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = -160.0
 offset_top = -70.0
 offset_right = 244.0

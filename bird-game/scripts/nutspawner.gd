@@ -7,8 +7,8 @@ extends Node
     preload("res://resources/rednut.tres"),
 ]
 @export var spawn_y := -1000.0
-@export var min_spawn_interval := 0.6
-@export var max_spawn_interval := 1.4
+@export var min_spawn_interval := 0.2
+@export var max_spawn_interval := 1.0
 @export var horizontal_padding := 8.0
 var nutcount = 0
 
