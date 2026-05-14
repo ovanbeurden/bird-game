@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=7 format=3 uid="uid://bpdrwuohijr8"]
 
+[ext_resource type="Script" uid="uid://dq6f8xixt8ohb" path="res://scenes/camera.gd" id="1_b05li"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
 [ext_resource type="PackedScene" uid="uid://dux1hl8qca85f" path="res://scenes/bird_guy.tscn" id="4_gtx3x"]
@@ -9,6 +10,7 @@
 size = Vector2(1021, 11)
 
 [node name="BirdGame" type="Node2D"]
+script = ExtResource("1_b05li")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_gtx3x")
