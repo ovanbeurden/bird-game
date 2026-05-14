@@ -1,7 +1,9 @@
 extends Node2D
+
 var cursor_close
 var cursor_open
-var mouse_size = 32
+var mouse_size = 64
+@onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,12 +13,17 @@ func _ready() -> void:
     var cursor_close_img = load("res://sprites/cursor close.png").get_image()
     cursor_close_img.resize(mouse_size, mouse_size)
     cursor_close = ImageTexture.create_from_image(cursor_close_img)
-    Input.set_custom_mouse_cursor(cursor_open, Input.CURSOR_ARROW, Vector2(mouse_size/2, mouse_size/2))
+    cursor_sprite.texture = cursor_open
+    Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
     
+
+func _process(_delta: float) -> void:
+    cursor_sprite.position = get_viewport().get_mouse_position()
+
 
 func _input(event):
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
-            Input.set_custom_mouse_cursor(cursor_close, Input.CURSOR_ARROW, Vector2(mouse_size/2, mouse_size/2))
+            cursor_sprite.texture = cursor_close
         else:
-            Input.set_custom_mouse_cursor(cursor_open, Input.CURSOR_ARROW, Vector2(mouse_size/2, mouse_size/2))
+            cursor_sprite.texture = cursor_open
