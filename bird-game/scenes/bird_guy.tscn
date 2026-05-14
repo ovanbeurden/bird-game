@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_oyc7i"]
 [ext_resource type="Texture2D" uid="uid://dhylpqs0mr7bd" path="res://sprites/birdBlue_open1.png" id="4_bu8xt"]
 [ext_resource type="Script" uid="uid://c4x5goysw2ldu" path="res://scripts/editor_sprite_helper.gd" id="5_bu8xt"]
-[ext_resource type="AudioStream" uid="uid://7t63fgm2dxc1" path="res://sound/rooster2.wav" id="5_oyc7i"]
-[ext_resource type="AudioStream" uid="uid://vxi03rkeltrn" path="res://sound/gulp.mp3" id="7_tx71x"]
+[ext_resource type="AudioStream" uid="uid://yc3da0l2g0js" path="res://sound/blue_grab.wav" id="5_tx71x"]
+[ext_resource type="AudioStream" uid="uid://cjyg7yfv24337" path="res://sound/blue_gulp.wav" id="7_muby4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
 size = Vector2(344.30023, 400.95218)
@@ -51,10 +51,10 @@ script = SubResource("GDScript_ys67x")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
 scale = Vector2(1.0000002, 1.0000002)
-stream = ExtResource("5_oyc7i")
+stream = ExtResource("5_tx71x")
 
 [node name="EditorSpriteHelper" type="Node" parent="."]
 script = ExtResource("5_bu8xt")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_tx71x")
+stream = ExtResource("7_muby4")

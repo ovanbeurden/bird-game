@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BirdData" load_steps=7 format=3 uid="uid://b21juy1ccoaat"]
 
-[ext_resource type="AudioStream" uid="uid://vxi03rkeltrn" path="res://sound/gulp.mp3" id="1_o7mix"]
+[ext_resource type="AudioStream" uid="uid://lfism0b2f4sx" path="res://sound/purple_gulp.wav" id="1_o7mix"]
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_vbryq"]
-[ext_resource type="AudioStream" uid="uid://7t63fgm2dxc1" path="res://sound/rooster2.wav" id="1_wx73b"]
 [ext_resource type="Texture2D" uid="uid://dscwffqgu4fey" path="res://sprites/birdPurple_close1.png" id="2_1h04w"]
+[ext_resource type="AudioStream" uid="uid://cxbyfmpnytcgv" path="res://sound/purple_grab.wav" id="2_njo75"]
 [ext_resource type="Texture2D" uid="uid://0i0ih0x0sg6d" path="res://sprites/birdPurple_up1.png" id="3_wx73b"]
 [ext_resource type="Texture2D" uid="uid://d17ymv4gkalc0" path="res://sprites/birdPurple_open1.png" id="4_o7mix"]
 
@@ -13,6 +13,6 @@ texture_hold = ExtResource("3_wx73b")
 texture_open = ExtResource("4_o7mix")
 texture_close = ExtResource("2_1h04w")
 color = "purple"
-grab_sound = ExtResource("1_wx73b")
+grab_sound = ExtResource("2_njo75")
 eat_sound = ExtResource("1_o7mix")
 metadata/_custom_type_script = "uid://bniak84vtafw"
