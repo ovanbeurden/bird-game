@@ -1,4 +1,5 @@
 extends Area2D
+class_name Nut
 
 var nutscore = 20
 @export var speed = 100.0
