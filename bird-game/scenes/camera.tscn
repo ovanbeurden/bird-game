@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=18 format=3 uid="uid://bpdrwuohijr8"]
 
 [ext_resource type="Script" uid="uid://dq6f8xixt8ohb" path="res://scenes/camera.gd" id="1_b05li"]
 [ext_resource type="Texture2D" uid="uid://bd5omer4p6nk6" path="res://sprites/newbackground.png" id="3_gg62t"]
@@ -13,8 +13,16 @@
 [ext_resource type="Script" uid="uid://wtbgeqsdo8vs" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 [ext_resource type="PackedScene" uid="uid://87j7d428povb" path="res://scenes/bomb.tscn" id="12_d8io0"]
 [ext_resource type="Texture2D" uid="uid://b4j2qdh714nor" path="res://art/snail.png" id="13_v3c5o"]
+[ext_resource type="FontFile" uid="uid://4vi4qdvss3it" path="res://fonts/GloriaHallelujah-Regular.ttf" id="14_qrs21"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gg62t"]
+
+[sub_resource type="FontVariation" id="FontVariation_qrs21"]
+base_font = ExtResource("14_qrs21")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ty1so"]
+font = SubResource("FontVariation_qrs21")
+font_size = 56
 
 [node name="BirdGame" type="Node2D"]
 script = ExtResource("1_b05li")
@@ -85,7 +93,9 @@ scale = Vector2(0.8829268, 0.54029506)
 texture = ExtResource("13_v3c5o")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -491.0
-offset_top = -466.0
-offset_right = -345.0
-offset_bottom = -417.0
+offset_left = -72.0
+offset_top = -528.0
+offset_right = 74.0
+offset_bottom = -479.0
+label_settings = SubResource("LabelSettings_ty1so")
+horizontal_alignment = 1
