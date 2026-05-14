@@ -32,12 +32,15 @@ func _physics_process(delta: float) -> void:
         global_position = get_global_mouse_position() + $Area2D.drag_offset
         velocity = velocity*0
 
-    if mouth_close_time_left > 0.0:
+    if birdstatus == 0:
+        $Area2D/Sprite2D.sprite_frames = bird_data.texture_dead
+    elif mouth_close_time_left > 0.0:
         $Area2D/Sprite2D.sprite_frames = bird_data.texture_close
     elif $Area2D.dragging:
         $Area2D/Sprite2D.sprite_frames = bird_data.texture_hold
     else:
         $Area2D/Sprite2D.sprite_frames = bird_data.texture_open
+        
     $Area2D/Sprite2D.play()
                 
     scale = Vector2(score/inv_scale_factor+0.1, score/inv_scale_factor+0.1)

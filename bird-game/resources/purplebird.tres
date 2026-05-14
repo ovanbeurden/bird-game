@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BirdData" load_steps=12 format=3 uid="uid://b21juy1ccoaat"]
+[gd_resource type="Resource" script_class="BirdData" load_steps=14 format=3 uid="uid://b21juy1ccoaat"]
 
 [ext_resource type="AudioStream" uid="uid://lfism0b2f4sx" path="res://sound/purple_gulp.wav" id="1_o7mix"]
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_vbryq"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://cxbyfmpnytcgv" path="res://sound/purple_grab.wav" id="2_njo75"]
 [ext_resource type="Texture2D" uid="uid://0i0ih0x0sg6d" path="res://sprites/birdPurple_up1.png" id="3_wx73b"]
 [ext_resource type="Texture2D" uid="uid://d17ymv4gkalc0" path="res://sprites/birdPurple_open1.png" id="4_o7mix"]
+[ext_resource type="Texture2D" uid="uid://b4lfuougg4mng" path="res://sprites/birdPurple_dead.png" id="5_p26kr"]
 [ext_resource type="Texture2D" uid="uid://sdfkm6y78mma" path="res://sprites/birdPurple_up2.png" id="6_twb5h"]
 [ext_resource type="Texture2D" uid="uid://dgjroldwck15r" path="res://sprites/birdPurple_open2.png" id="8_p26kr"]
 
@@ -14,6 +15,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_1h04w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42tmj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p26kr")
 }],
 "loop": true,
 "name": &"default",
@@ -53,6 +65,7 @@ script = ExtResource("1_vbryq")
 texture_hold = SubResource("SpriteFrames_h0wb4")
 texture_open = SubResource("SpriteFrames_v8mu0")
 texture_close = SubResource("SpriteFrames_pfy6r")
+texture_dead = SubResource("SpriteFrames_42tmj")
 color = "purple"
 grab_sound = ExtResource("2_njo75")
 eat_sound = ExtResource("1_o7mix")
