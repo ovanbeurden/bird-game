@@ -14,6 +14,9 @@ func _input(event):
             dragging = true
         else:
             dragging = false
+            #
+#func update_sprite():
+    #$Sprite2D.texture = 
 
 func _process(delta):
-    print(dragging)
+    pass

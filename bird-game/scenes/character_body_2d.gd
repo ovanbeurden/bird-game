@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var down_speed = 0
+var score = 0.0
 
 func _physics_process(delta: float) -> void:
     # Add the gravity.
@@ -11,6 +12,7 @@ func _physics_process(delta: float) -> void:
             
     if $Area2D.dragging:
         global_position = get_global_mouse_position() + $Area2D.drag_offset
+        velocity = velocity*0
 
     for i in range(get_slide_collision_count()):
         var collision = get_slide_collision(i)
@@ -18,3 +20,10 @@ func _physics_process(delta: float) -> void:
 
         if body is RigidBody2D:
             print("Touching rigid body:", body.name)
+            if body.name == "Nut":
+                score += body.nutscore
+                print(score)
+                
+    #scale = Vector2(score/10000+0.1, score/10000+0.1)
+    print(score)
+    

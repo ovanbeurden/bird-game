@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dltctbwfvfglt"]
+[gd_scene load_steps=4 format=3 uid="uid://v331m71nltl4"]
 
+[ext_resource type="Script" uid="uid://bi5x3ipgsl45d" path="res://scenes/nut.gd" id="1_1t6dd"]
 [ext_resource type="Texture2D" uid="uid://dwkutve8dyjp" path="res://sprites/walnut.jpg" id="1_e8gc1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1t6dd"]
 radius = 25.019993
 
 [node name="Nut" type="RigidBody2D"]
+script = ExtResource("1_1t6dd")
 
 [node name="Walnut" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
