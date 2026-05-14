@@ -1,10 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://87j7d428povb"]
+[gd_scene load_steps=7 format=3 uid="uid://87j7d428povb"]
 
+[ext_resource type="Script" uid="uid://dcay0047ssxrk" path="res://scenes/bomb.gd" id="1_84slv"]
 [ext_resource type="Texture2D" uid="uid://bx0sax2hcs1i1" path="res://sprites/bomb1.png" id="1_vpdcx"]
 [ext_resource type="Texture2D" uid="uid://3obp6nn1ko15" path="res://sprites/bomb2.png" id="2_j15uc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_84slv"]
-size = Vector2(234, 167)
+[ext_resource type="Script" uid="uid://fgk2u66gn33m" path="res://scenes/bomb_collide.gd" id="4_nxi8k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxi8k"]
 animations = [{
@@ -20,12 +19,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84slv"]
+size = Vector2(234, 167)
+
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_84slv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nxi8k")
+frame_progress = 0.6416292
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 23.5)
 shape = SubResource("RectangleShape2D_84slv")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_nxi8k")
-frame_progress = 0.55794215
+script = ExtResource("4_nxi8k")

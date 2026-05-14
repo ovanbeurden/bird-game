@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dojq4hraosrh3"]
 
 [ext_resource type="Script" uid="uid://ba202kpxlmlgr" path="res://scenes/character_body_2d.gd" id="1_nit21"]
-[ext_resource type="Script" path="res://scenes/collision_shape_2d.gd" id="2_bu8xt"]
+[ext_resource type="Script" uid="uid://ba88a3wb78ews" path="res://scenes/collision_shape_2d.gd" id="2_bu8xt"]
 [ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_oyc7i"]
 [ext_resource type="Texture2D" uid="uid://dhylpqs0mr7bd" path="res://sprites/birdBlue_open1.png" id="4_bu8xt"]
 [ext_resource type="Script" uid="uid://c4x5goysw2ldu" path="res://scripts/editor_sprite_helper.gd" id="5_bu8xt"]
