@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="bird-game"
-run/main_scene="res://scenes/camera.tscn"
+run/main_scene="uid://c8yuq2opbll1l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1000
+window/size/viewport_height=500
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [rendering]
 
