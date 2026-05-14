@@ -5,10 +5,11 @@ var score = 0.0
 var inv_scale_factor = 1000
 var birdstatus = 1
 var mouth_close_time_left := 0.0
+
 @export var bird_data: BirdData = preload("res://resources/bluebird.tres")
 @onready var grab_player = $GrabPlayer
 @onready var gulp_player = $GulpPlayer
-
+@onready var main = get_tree().get_root().get_node("BirdGame")
 
 func _ready() -> void:
     print("My bird data: ", bird_data)
@@ -53,9 +54,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
         return
 
     mouth_close_time_left = 0.5
-    $Area2D/Sprite2D.texture = bird_data.texture_close
+    $Area2D/Sprite2D.sprite_frames = bird_data.texture_close
     if bird_data.color.to_lower() == area.nut_data.color.to_lower():
         score += area.nutscore
+        main.global_score += area.nutscore
     else:
         if score < area.nutscore*2:
             score = 0.0

@@ -72,7 +72,7 @@ shape = SubResource("CircleShape2D_oyc7i")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Area2D"]
 sprite_frames = SubResource("SpriteFrames_6hvx6")
 animation = &"close"
-frame_progress = 0.8848125
+frame_progress = 0.5114126
 
 [node name="EditorSpriteHelper" type="Node" parent="."]
 script = ExtResource("5_bu8xt")

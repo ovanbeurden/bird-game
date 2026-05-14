@@ -5,6 +5,7 @@ var cursor_open
 var mouse_size = 64
 var hide_system_cursor := false
 var birdlife = 3
+var global_score = 0
 
 @onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
