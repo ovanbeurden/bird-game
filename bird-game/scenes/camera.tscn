@@ -14,8 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://87j7d428povb" path="res://scenes/bomb.tscn" id="12_d8io0"]
 [ext_resource type="Script" uid="uid://wtbgeqsdo8vs" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
-size = Vector2(1021, 11)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gg62t"]
 
 [node name="BirdGame" type="Node2D"]
 script = ExtResource("1_b05li")
@@ -33,8 +32,7 @@ metadata/_edit_lock_ = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(14.5, 4.5)
-shape = SubResource("RectangleShape2D_ys67x")
+shape = SubResource("WorldBoundaryShape2D_gg62t")
 
 [node name="Nut" parent="." instance=ExtResource("5_b05li")]
 position = Vector2(-73, -683)
@@ -63,6 +61,11 @@ script = ExtResource("8_mq7sm")
 
 [node name="NutSpawner" type="Node" parent="."]
 script = ExtResource("10_ft5hh")
+
+[node name="CursorLayer" type="CanvasLayer" parent="."]
+
+[node name="CursorSprite" type="Sprite2D" parent="CursorLayer"]
+z_index = 1000
 
 [node name="Area2D" parent="." instance=ExtResource("12_d8io0")]
 position = Vector2(80.99999, -22.999998)
