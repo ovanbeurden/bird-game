@@ -26,10 +26,11 @@ func _process(delta: float) -> void:
 
 [node name="BirdGuy" type="CharacterBody2D"]
 scale = Vector2(0.20040649, 0.15408629)
+collision_layer = 2
 script = ExtResource("1_nit21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(73.912254, -277.64478)
+position = Vector2(-0.9356079, -5.070221)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_kod1s")
 script = ExtResource("2_bu8xt")
@@ -38,12 +39,12 @@ script = ExtResource("2_bu8xt")
 script = ExtResource("3_oyc7i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(143.77025, -318.40924)
+position = Vector2(68.922386, -45.834686)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_gtx3x")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(63.932552, -279.46994)
+position = Vector2(-10.915318, -6.8954163)
 scale = Vector2(0.3554767, 0.35267046)
 texture = ExtResource("4_tx71x")
 script = SubResource("GDScript_ys67x")

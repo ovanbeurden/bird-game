@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
                 $Area2D/Sprite2D.texture = bird_data.texture_close
                 score += body.nutscore
                 print(score)
+                # TODO: remove nut
                 
     #scale = Vector2(score/10000+0.1, score/10000+0.1)
     print(score)
