@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://bpdrwuohijr8"]
 
-[ext_resource type="Script" uid="uid://ba88a3wb78ews" path="res://scenes/collision_shape_2d.gd" id="2_p8nh0"]
+[ext_resource type="Script" path="res://scenes/collision_shape_2d.gd" id="2_p8nh0"]
 [ext_resource type="Texture2D" uid="uid://b4j2qdh714nor" path="res://art/snail.png" id="2_tmlye"]
 [ext_resource type="Script" uid="uid://ba202kpxlmlgr" path="res://scenes/character_body_2d.gd" id="2_ys67x"]
 [ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_b05li"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
-[ext_resource type="PackedScene" uid="uid://v331m71nltl4" path="res://scenes/nut.tscn" id="5_b05li"]
+[ext_resource type="PackedScene" uid="uid://dltctbwfvfglt" path="res://scenes/nut.tscn" id="5_b05li"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
 size = Vector2(1021, 11)

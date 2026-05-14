@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="BirdData" load_steps=4 format=3 uid="uid://bh0xkptc6lgv8"]
+[gd_resource type="Resource" script_class="BirdData" load_steps=5 format=3 uid="uid://bh0xkptc6lgv8"]
 
 [ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_x4msn"]
-[ext_resource type="Texture2D" uid="uid://xxo66dqkmf1g" path="res://sprites/Bird 1 close.png" id="2_0drmh"]
-[ext_resource type="Texture2D" uid="uid://dpy3mrgi6jbrk" path="res://sprites/Bird 1 open.png" id="2_mlfhp"]
+[ext_resource type="Texture2D" uid="uid://dxemv773aylot" path="res://sprites/birdBlue_close1.png" id="2_0drmh"]
+[ext_resource type="Texture2D" uid="uid://jh00opk0yrcy" path="res://sprites/birdBlue_up1.png" id="3_55en7"]
+[ext_resource type="Texture2D" uid="uid://dhylpqs0mr7bd" path="res://sprites/birdBlue_open1.png" id="4_36clk"]
 
 [resource]
 script = ExtResource("1_x4msn")
-texture_hold = ExtResource("2_mlfhp")
-texture_open = ExtResource("2_0drmh")
+texture_hold = ExtResource("3_55en7")
+texture_open = ExtResource("4_36clk")
 texture_close = ExtResource("2_0drmh")
 metadata/_custom_type_script = "uid://bniak84vtafw"
