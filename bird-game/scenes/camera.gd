@@ -14,7 +14,6 @@ var final_score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     hide_system_cursor = not OS.has_feature("editor")
-
     var cursor_open_img = load("res://sprites/cursor open.png").get_image()
     cursor_open_img.resize(mouse_size, mouse_size)
     cursor_open = ImageTexture.create_from_image(cursor_open_img)    
@@ -38,9 +37,6 @@ func _process(_delta: float) -> void:
     if birdlife == 0 or bomblife == 0:
         game_over()
     
-        
-        
-
 
 func _input(event):
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
