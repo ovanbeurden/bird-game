@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BirdData" load_steps=5 format=3 uid="uid://b1dv82hs2xw0a"]
+
+[ext_resource type="Script" uid="uid://bniak84vtafw" path="res://scripts/bird_data.gd" id="1_ra2oh"]
+[ext_resource type="Texture2D" uid="uid://dkv4hgx5d76mv" path="res://sprites/birdRed_close1.png" id="2_205of"]
+[ext_resource type="Texture2D" uid="uid://bppwiog8pq74p" path="res://sprites/birdRed_up1.png" id="3_d6hrx"]
+[ext_resource type="Texture2D" uid="uid://c05ddkkl1epsx" path="res://sprites/birdRed_open1.png" id="4_vrrs1"]
+
+[resource]
+script = ExtResource("1_ra2oh")
+texture_hold = ExtResource("3_d6hrx")
+texture_open = ExtResource("4_vrrs1")
+texture_close = ExtResource("2_205of")
+metadata/_custom_type_script = "uid://bniak84vtafw"
