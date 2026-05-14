@@ -1,10 +1,12 @@
 extends Node2D
 
 @onready var sprite = $Sprite2D
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @export var animation_duration := 0.5
 @export var start_scale_multiplier := 0.0
 @export var end_scale_multiplier := 2.4
+@export var explosion_sound: AudioStream
 
 var _elapsed_time := 0.0
 var _base_scale := Vector2.ONE
@@ -13,6 +15,8 @@ var _base_scale := Vector2.ONE
 func _ready() -> void:
     _base_scale = scale
     scale = _base_scale * start_scale_multiplier
+    audio_player.stream = explosion_sound
+    audio_player.play()
 
 
 func _process(delta: float) -> void:
