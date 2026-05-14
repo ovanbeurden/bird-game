@@ -1,16 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=13 format=3 uid="uid://bpdrwuohijr8"]
 
 [ext_resource type="Script" uid="uid://dq6f8xixt8ohb" path="res://scenes/camera.gd" id="1_b05li"]
+[ext_resource type="Texture2D" uid="uid://bd5omer4p6nk6" path="res://sprites/newbackground.png" id="3_gg62t"]
 [ext_resource type="Script" uid="uid://dh6hhk0mq4okw" path="res://scripts/camera_2d.gd" id="3_gtx3x"]
-[ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
 [ext_resource type="PackedScene" uid="uid://dojq4hraosrh3" path="res://scenes/bird_guy.tscn" id="4_gtx3x"]
 [ext_resource type="PackedScene" uid="uid://dltctbwfvfglt" path="res://scenes/nut.tscn" id="5_b05li"]
 [ext_resource type="Resource" uid="uid://b21juy1ccoaat" path="res://resources/purplebird.tres" id="5_p8nh0"]
 [ext_resource type="Resource" uid="uid://b1dv82hs2xw0a" path="res://resources/redbird.tres" id="6_ys67x"]
 [ext_resource type="Resource" uid="uid://cyayr33ffu011" path="res://resources/purplenut.tres" id="8_5tt5c"]
-[ext_resource type="Script" uid="uid://cjur6usqk6d62" path="res://scenes/node.gd" id="8_mq7sm"]
+[ext_resource type="Script" path="res://scenes/node.gd" id="8_mq7sm"]
 [ext_resource type="Resource" uid="uid://vpxwrgs5o7hv" path="res://resources/rednut.tres" id="9_al5s2"]
-[ext_resource type="Script" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
+[ext_resource type="Script" uid="uid://wtbgeqsdo8vs" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
 size = Vector2(1021, 11)
@@ -23,9 +23,9 @@ script = ExtResource("3_gtx3x")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -100
-position = Vector2(14, -370.99997)
+position = Vector2(0, -371)
 scale = Vector2(0.371582, 0.371582)
-texture = ExtResource("4_b05li")
+texture = ExtResource("3_gg62t")
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
