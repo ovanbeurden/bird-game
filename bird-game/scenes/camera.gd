@@ -2,9 +2,10 @@ extends Node2D
 
 var cursor_close
 var cursor_open
-var mouse_size = 64
+var mouse_size = 32
 var hide_system_cursor := false
 var birdlife = 3
+var global_score = 0
 
 @onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
@@ -25,7 +26,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
     cursor_sprite.position = get_viewport().get_mouse_position()
-    
+    $Label.text = "Score: " + str(global_score)
     birdlife = $BirdGuy.birdstatus + $BirdGuy2.birdstatus + $BirdGuy3.birdstatus
     if birdlife == 0:
         game_over()

@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dojq4hraosrh3"]
+[gd_scene load_steps=15 format=3 uid="uid://dojq4hraosrh3"]
 
 [ext_resource type="Script" uid="uid://ba202kpxlmlgr" path="res://scenes/character_body_2d.gd" id="1_nit21"]
 [ext_resource type="Script" uid="uid://ba88a3wb78ews" path="res://scenes/collision_shape_2d.gd" id="2_bu8xt"]
 [ext_resource type="Script" uid="uid://ce1nvii1l8u7k" path="res://scenes/area_2d.gd" id="3_oyc7i"]
 [ext_resource type="Texture2D" uid="uid://dhylpqs0mr7bd" path="res://sprites/birdBlue_open1.png" id="4_bu8xt"]
+[ext_resource type="Texture2D" uid="uid://dxemv773aylot" path="res://sprites/birdBlue_close1.png" id="4_x6tre"]
 [ext_resource type="Script" uid="uid://c4x5goysw2ldu" path="res://scripts/editor_sprite_helper.gd" id="5_bu8xt"]
 [ext_resource type="AudioStream" uid="uid://yc3da0l2g0js" path="res://sound/blue_grab.wav" id="5_tx71x"]
+[ext_resource type="Texture2D" uid="uid://cefkrkuvhn1pq" path="res://sprites/birdBlue_open2.png" id="6_ob1w2"]
+[ext_resource type="Texture2D" uid="uid://jh00opk0yrcy" path="res://sprites/birdBlue_up1.png" id="7_1hukn"]
 [ext_resource type="AudioStream" uid="uid://cjyg7yfv24337" path="res://sound/blue_gulp.wav" id="7_muby4"]
+[ext_resource type="Texture2D" uid="uid://dsfoco7o56alo" path="res://sprites/birdBlue_up2.png" id="8_qwnog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
 size = Vector2(344.30023, 400.95218)
@@ -14,18 +18,38 @@ size = Vector2(344.30023, 400.95218)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyc7i"]
 radius = 361.67
 
-[sub_resource type="GDScript" id="GDScript_ys67x"]
-script/source = "extends Sprite2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-    pass
-"
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hvx6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_x6tre")
+}],
+"loop": true,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bu8xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ob1w2")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1hukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qwnog")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
 
 [node name="BirdGuy" type="CharacterBody2D"]
 scale = Vector2(0.20040649, 0.15408629)
@@ -45,9 +69,10 @@ script = ExtResource("3_oyc7i")
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_oyc7i")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("4_bu8xt")
-script = SubResource("GDScript_ys67x")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_6hvx6")
+animation = &"close"
+frame_progress = 0.93245196
 
 [node name="EditorSpriteHelper" type="Node" parent="."]
 script = ExtResource("5_bu8xt")
