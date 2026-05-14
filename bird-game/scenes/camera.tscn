@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpdrwuohijr8"]
+[gd_scene load_steps=11 format=3 uid="uid://bpdrwuohijr8"]
 
-[ext_resource type="Script" uid="uid://cb6fsv7o0bhjg" path="res://scripts/birb_unit.gd" id="1_kod1s"]
 [ext_resource type="Script" uid="uid://ba88a3wb78ews" path="res://scenes/collision_shape_2d.gd" id="2_p8nh0"]
 [ext_resource type="Texture2D" uid="uid://b4j2qdh714nor" path="res://art/snail.png" id="2_tmlye"]
 [ext_resource type="Script" uid="uid://ba202kpxlmlgr" path="res://scenes/character_body_2d.gd" id="2_ys67x"]
@@ -9,43 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://bb57s0c6oauiq" path="res://sprites/Background.png" id="4_b05li"]
 [ext_resource type="PackedScene" path="res://scenes/nut.tscn" id="5_b05li"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
+size = Vector2(1021, 11)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kod1s"]
 size = Vector2(344.30023, 279.06442)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtx3x"]
 size = Vector2(234.52328, 191.71634)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
-size = Vector2(1021, 11)
-
 [node name="BirdGame" type="Node2D"]
-
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("1_kod1s")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
-position = Vector2(-14.999999, -18)
-scale = Vector2(0.20040649, 0.15408629)
-script = ExtResource("2_ys67x")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
-position = Vector2(87.32259, 74.63356)
-scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_kod1s")
-script = ExtResource("2_p8nh0")
-
-[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D"]
-script = ExtResource("3_b05li")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Area2D"]
-position = Vector2(152.1907, 38.939224)
-scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_gtx3x")
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D/Area2D"]
-position = Vector2(69.85803, 77.87846)
-scale = Vector2(0.3554767, 0.3526704)
-texture = ExtResource("2_tmlye")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_gtx3x")
@@ -65,3 +37,27 @@ shape = SubResource("RectangleShape2D_ys67x")
 
 [node name="Nut" parent="." instance=ExtResource("5_b05li")]
 position = Vector2(-73, -683)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-14.999999, -18)
+scale = Vector2(0.20040649, 0.15408629)
+script = ExtResource("2_ys67x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(87.32259, 74.63356)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_kod1s")
+script = ExtResource("2_p8nh0")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+script = ExtResource("3_b05li")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(152.1907, 38.939224)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_gtx3x")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(69.85803, 77.87846)
+scale = Vector2(0.3554767, 0.3526704)
+texture = ExtResource("2_tmlye")
