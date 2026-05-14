@@ -6,12 +6,14 @@ var mouse_size = 32
 var hide_system_cursor := false
 var birdlife = 3
 var global_score = 0
+var bomblife = 3
+var final_score = 0
 
 @onready var cursor_sprite: Sprite2D = $CursorLayer/CursorSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    hide_system_cursor = not OS.has_feature("editor")
+    hide_system_cursor = not OS.has_feature("editor")lab
 
     var cursor_open_img = load("res://sprites/cursor open.png").get_image()
     cursor_open_img.resize(mouse_size, mouse_size)
@@ -22,15 +24,21 @@ func _ready() -> void:
     cursor_sprite.texture = cursor_open
     Input.mouse_mode = Input.MOUSE_MODE_HIDDEN if hide_system_cursor else Input.MOUSE_MODE_VISIBLE
     $GameOver.visible = false
+    $Label2.visible = false
     
 
 func _process(_delta: float) -> void:
     cursor_sprite.position = get_viewport().get_mouse_position()
     $Label.text = "Score: " + str(global_score)
     birdlife = $BirdGuy.birdstatus + $BirdGuy2.birdstatus + $BirdGuy3.birdstatus
-    if birdlife == 0:
+    if has_node("Area2D") or has_node("Area2D2") or has_node("Area2D3"):
+        bomblife = 1
+    else:
+        bomblife = 0
+    if birdlife == 0 or bomblife == 0:
         game_over()
-        # TODO: stop everything and game over
+    
+        
         
 
 
@@ -46,5 +54,7 @@ func _exit_tree() -> void:
 
             
 func game_over():
-    get_tree().paused = true
     $GameOver.visible = true
+    final_score = global_score
+    $Label2.text = "Your final score: " + str(final_score)
+    $Label2.visible = true
