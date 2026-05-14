@@ -58,6 +58,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
     if bird_data.color.to_lower() == area.nut_data.color.to_lower():
         score += area.nutscore
         main.global_score += area.nutscore
+        print(main.global_score)
     else:
         if score < area.nutscore*2:
             score = 0.0
