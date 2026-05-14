@@ -17,6 +17,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
     print("YOU DIED BITCH")
     #$Area2D/Sprite2D.texture = bird_data.texture_close
+    # TODO: play explosion animation and sound, remove after explosion
+    # Remove score
 
-    #play_gulp_sound()
     area.queue_free()

@@ -8,11 +8,10 @@
 [ext_resource type="Resource" uid="uid://b21juy1ccoaat" path="res://resources/purplebird.tres" id="5_p8nh0"]
 [ext_resource type="Resource" uid="uid://b1dv82hs2xw0a" path="res://resources/redbird.tres" id="6_ys67x"]
 [ext_resource type="Resource" uid="uid://cyayr33ffu011" path="res://resources/purplenut.tres" id="8_5tt5c"]
-[ext_resource type="Script" path="res://scenes/node.gd" id="8_mq7sm"]
+[ext_resource type="Script" uid="uid://cjur6usqk6d62" path="res://scenes/node.gd" id="8_mq7sm"]
 [ext_resource type="Resource" uid="uid://vpxwrgs5o7hv" path="res://resources/rednut.tres" id="9_al5s2"]
 [ext_resource type="Script" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 [ext_resource type="PackedScene" uid="uid://87j7d428povb" path="res://scenes/bomb.tscn" id="12_d8io0"]
-[ext_resource type="Script" uid="uid://wtbgeqsdo8vs" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gg62t"]
 
