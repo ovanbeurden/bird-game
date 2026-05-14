@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://cyayr33ffu011" path="res://resources/purplenut.tres" id="8_5tt5c"]
 [ext_resource type="Resource" uid="uid://vpxwrgs5o7hv" path="res://resources/rednut.tres" id="9_al5s2"]
 [ext_resource type="Script" uid="uid://cjur6usqk6d62" path="res://scenes/node.gd" id="8_mq7sm"]
+[ext_resource type="Script" path="res://scripts/nutspawner.gd" id="10_ft5hh"]
 
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys67x"]
@@ -58,3 +59,6 @@ nut_data = ExtResource("9_al5s2")
 
 [node name="DragMan" type="Node" parent="."]
 script = ExtResource("8_mq7sm")
+
+[node name="NutSpawner" type="Node" parent="."]
+script = ExtResource("10_ft5hh")
