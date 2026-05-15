@@ -43,25 +43,25 @@ metadata/_edit_lock_ = true
 shape = SubResource("WorldBoundaryShape2D_gg62t")
 
 [node name="Nut" parent="." instance=ExtResource("5_b05li")]
-position = Vector2(-73, -683)
+position = Vector2(108, -675)
 
 [node name="BirdGuy" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(-14.999999, -18)
+position = Vector2(127.99999, -38)
 
 [node name="BirdGuy2" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(183.104, -20.774)
+position = Vector2(261, -35)
 bird_data = ExtResource("5_p8nh0")
 
 [node name="BirdGuy3" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(-156.009, -21.201)
+position = Vector2(-145, -37)
 bird_data = ExtResource("6_ys67x")
 
 [node name="Nut2" parent="." instance=ExtResource("5_b05li")]
-position = Vector2(-418, -722)
+position = Vector2(238, -768)
 nut_data = ExtResource("8_5tt5c")
 
 [node name="Nut3" parent="." instance=ExtResource("5_b05li")]
-position = Vector2(322, -726)
+position = Vector2(-174, -895)
 nut_data = ExtResource("9_al5s2")
 
 [node name="DragMan" type="Node" parent="."]

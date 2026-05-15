@@ -2,7 +2,7 @@ extends Node2D
 
 var cursor_close
 var cursor_open
-var mouse_size = 32
+var mouse_size = 64
 var hide_system_cursor := false
 var birdlife = 3
 var global_score = 0

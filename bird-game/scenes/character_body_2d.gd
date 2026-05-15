@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var down_speed = 0
-var score = 0.0
+var score = 40.0
 var inv_scale_factor = 700
 var birdstatus = 1
 var mouth_close_time_left := 0.0
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
     move_and_slide()
             
     if $Area2D.dragging:
-        global_position = get_global_mouse_position() + $Area2D.drag_offset
+        global_position = $Area2D.drag_pointer_global_position + $Area2D.drag_offset
         velocity = velocity*0
 
     if birdstatus == 0:
