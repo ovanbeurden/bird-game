@@ -40,20 +40,21 @@ metadata/_edit_lock_ = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -46)
 shape = SubResource("WorldBoundaryShape2D_gg62t")
 
 [node name="Nut" parent="." instance=ExtResource("5_b05li")]
 position = Vector2(108, -675)
 
 [node name="BirdGuy" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(127.99999, -38)
+position = Vector2(128, -93.999985)
 
 [node name="BirdGuy2" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(261, -35)
+position = Vector2(261, -90.999985)
 bird_data = ExtResource("5_p8nh0")
 
 [node name="BirdGuy3" parent="." instance=ExtResource("4_gtx3x")]
-position = Vector2(-145, -37)
+position = Vector2(-145.00003, -92.999985)
 bird_data = ExtResource("6_ys67x")
 
 [node name="Nut2" parent="." instance=ExtResource("5_b05li")]
@@ -77,17 +78,17 @@ z_index = 1000
 
 [node name="Area2D" parent="." instance=ExtResource("12_d8io0")]
 z_index = -1
-position = Vector2(2, -45)
+position = Vector2(2, -79)
 scale = Vector2(0.4, 0.4)
 
 [node name="Area2D2" parent="." instance=ExtResource("12_d8io0")]
 z_index = -1
-position = Vector2(368, -46)
+position = Vector2(368, -80)
 scale = Vector2(0.4, 0.4)
 
 [node name="Area2D3" parent="." instance=ExtResource("12_d8io0")]
 z_index = -1
-position = Vector2(-391, -46)
+position = Vector2(-391.00003, -80)
 scale = Vector2(0.4, 0.4)
 
 [node name="GameOver" type="Sprite2D" parent="."]
